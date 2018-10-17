@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edyst</title>
+</head>
+<body>
+	<div>
+		<h1>Edyst Challenge</h1>
+		<form method="POST", action="">
+			{{form.csrf_token}}
+			{{form.url.label}}
+			{{form.url}}
+			{{form.submit}}
+		</form>
+
+		{% if result %}
+			<p>Word count: {{result}}</p>
+		{% endif %}
+	</div>
+</body>
+</html>

@@ -1,9 +1,24 @@
 import requests
 from flask import Flask, render_template, redirect, url_for, request
 from forms import UrlInputForm
+from flask_sqlalchemy import SQLAlchemy
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'f97d8be751f31b5f16f143bb9fef833e'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///edyst.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
+
+
+class Counter(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	url = db.Column(db.String, nullable=False)
+	word_count = db.Column(db.Integer, nullable=False)
+
+
+	def __repr__(self):
+		return '{0} has {1} words'.format(self.url, self.word_count)
 
 
 

@@ -30,3 +30,12 @@
  ``` python app.py ```
  
 Now open your browser and visit ``` http://localhost:5000 ```
+
+
+### Run Tests
+Open a new terminal window and activate your virtual environment, then run tests using
+
+``` python tests.py ```
+
+
+

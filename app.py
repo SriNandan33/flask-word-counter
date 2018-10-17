@@ -24,7 +24,15 @@ class Counter(db.Model):
 
 def count_words_at_url(url):
 	resp = requests.get(url)
-	return len(resp.text.split())
+	word_count = len(resp.text.split())
+	try:
+		instance = Counter(url=url, word_count=word_count)
+		db.session.add(instance)
+		db.session.commit()
+	except:
+		print('not able to insert in db')
+		
+	return word_count
 
 
 

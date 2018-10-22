@@ -24,7 +24,7 @@
  > Note: You should keep this *worker* running in background.
  
  ### Create Database
-pen a new teminal window and activate your virtual enviroment, then create database using
+Open a new teminal window and activate your virtual enviroment, then create database using
  
  ``` python create_db.py```
  

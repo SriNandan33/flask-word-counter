@@ -1,5 +1,5 @@
-# Edyst Challenge
-### A simple flask app that counts words in given URL.
+# Flask Word Counter
+### A simple flask app that counts words in a webpage for a given URL.
 
 ## Dependencies
  * Flask==1.0.2
